@@ -36,23 +36,23 @@ Para facilitar a execução e evitar problemas de ambiente, você pode rodar est
 
 Crie o arquivo Dockerfile na raiz do projeto (caso ainda não exista):
 
-# Use imagem base com Python
+Use imagem base com Python
 FROM python:3.10-slim
 
-# Define diretório de trabalho
+Define diretório de trabalho
 WORKDIR /app
 
-# Copia arquivos do projeto para o container
+Copia arquivos do projeto para o container
 COPY . /app
 
-# Instala dependências
+Instala dependências
 RUN pip install --upgrade pip && \
     pip install -r requirements.txt
 
-# Expõe a porta padrão do Streamlit
+Expõe a porta padrão do Streamlit
 EXPOSE 8501
 
-# Comando para iniciar o app
+Comando para iniciar o app
 CMD ["streamlit", "run", "main.py", "--server.enableCORS=false"]
 
 Crie o arquivo .dockerignore (opcional, mas recomendado):
