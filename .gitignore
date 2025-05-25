@@ -1,0 +1,19 @@
+# Ignora o ambiente virtual
+venv/
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Banco de dados local (se existir)
+*.db
+*.sqlite3
+
+# Pastas não versionadas (como docs)
+docs/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
